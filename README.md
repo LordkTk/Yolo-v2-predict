@@ -7,6 +7,7 @@ Use yolo for prediction.
     >> Different from case in tf, weights for kernel from DarkNet are in structure of [outfilter, infilter, size, size]. So after reshape, a transpose is needed. 
   2. Build net according to cfg file from DarkNet (tiny-v2: https://github.com/pjreddie/darknet/blob/master/cfg/yolov2-tiny.cfg);
   3. Postprocessing: interpret output from nets to boxes.
+  
   Tips:
   1. Inputs need to be normalized to 0-1;
   2. For max_pool layer with size 2 and stride 1, padding is needed to keep img size invariant (tf.nn.max_pool(-,-,-, padding = 'SAME'));
