@@ -66,9 +66,10 @@ def max_pool(x, size, stride):
         return tf.nn.max_pool(x, [1,size,size,1], [1,stride,stride,1], 'VALID')
     else:
         return tf.nn.max_pool(x, [1,size,size,1], [1,stride,stride,1], 'SAME')
+
 ind = 0
 x = tf.placeholder(tf.float32, [None,416,416,3])
-leak = 0.1
+
 'conv1'
 infilters = 3; outfilters = 16; size = 3; stride = 1; name = '_conv1'
 conv, ind = conv2d(x, infilters, outfilters, size, stride, name, ind, tiny)
