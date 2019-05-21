@@ -6,7 +6,7 @@ Use yolo for prediction.
   
     Use np.fromfile() read the .weights file; useful weights data start from 6th;
     Structure of .weights file: for batchnorm layer, data are in sequence of beta, gamma, mean, variance for batchnormalization, and then weights for kernel; for layer without batchnorm, they are bias and then weights;
-    Different from case in tf, weights for kernel from DarkNet are in structure of [outfilter, infilter, size, size]. So after reshape, a transpose is needed. 
+    Different from the case in tf, weights for kernel from DarkNet are in structure of [outfilter, infilter, size, size]. So after reshape, a transpose is needed. 
     
   2. Build net according to cfg file from DarkNet (tiny-v2: https://github.com/pjreddie/darknet/blob/master/cfg/yolov2-tiny.cfg);
   3. Postprocessing: interpret output from nets to boxes.
