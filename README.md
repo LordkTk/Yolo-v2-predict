@@ -3,12 +3,9 @@ Use yolo for prediction.
 
   There are mainly three parts of the code.
   1. Yolo weights extractor: transform weights file (tiny-v2: https://pjreddie.com/media/files/yolov2-tiny.weights) from DarkNet to tf;
-  
-    >> Use np.fromfile() read the .weights file; useful weights data start from 6th;
-    
-    >> Structure of .weights file: for batchnorm layer, data are in sequence of beta, gamma, mean, variance for batchnormalization, and then weights for kernel; for layer without batchnorm, they are bias and then weights;
-    
-    >> Different from case in tf, weights for kernel from DarkNet are in structure of [outfilter, infilter, size, size]. So after reshape, a transpose is needed. 
+  Use np.fromfile() read the .weights file; useful weights data start from 6th;
+  Structure of .weights file: for batchnorm layer, data are in sequence of beta, gamma, mean, variance for batchnormalization, and then weights for kernel; for layer without batchnorm, they are bias and then weights;
+  Different from case in tf, weights for kernel from DarkNet are in structure of [outfilter, infilter, size, size]. So after reshape, a transpose is needed. 
     
   2. Build net according to cfg file from DarkNet (tiny-v2: https://github.com/pjreddie/darknet/blob/master/cfg/yolov2-tiny.cfg);
   3. Postprocessing: interpret output from nets to boxes.
