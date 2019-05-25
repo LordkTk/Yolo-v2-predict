@@ -1,5 +1,5 @@
-# Yolo
-Use yolo for prediction.
+# Yolo2
+Use yolo2 for prediction.
 
 Important references: https://zhuanlan.zhihu.com/p/35325884; https://github.com/xiaohu2015/DeepLearning_tutorials/blob/master/ObjectDetections/yolo2/model.py.
 
